@@ -7,14 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		35167BD31F2054A000AD80FB /* Story.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35167BD21F2054A000AD80FB /* Story.swift */; };
+		35167BD51F205B3F00AD80FB /* Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35167BD41F205B3F00AD80FB /* Page.swift */; };
+		35167BD71F206A0200AD80FB /* PageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35167BD61F206A0200AD80FB /* PageController.swift */; };
 		35908D641F2015FF00113808 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35908D631F2015FF00113808 /* AppDelegate.swift */; };
 		35908D661F2015FF00113808 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35908D651F2015FF00113808 /* ViewController.swift */; };
 		35908D691F2015FF00113808 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35908D671F2015FF00113808 /* Main.storyboard */; };
 		35908D6B1F2015FF00113808 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35908D6A1F2015FF00113808 /* Assets.xcassets */; };
 		35908D6E1F2015FF00113808 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35908D6C1F2015FF00113808 /* LaunchScreen.storyboard */; };
+		35AF6A6F1F22A49800F72FAC /* Audio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35AF6A6E1F22A49800F72FAC /* Audio.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		35167BD21F2054A000AD80FB /* Story.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Story.swift; sourceTree = "<group>"; };
+		35167BD41F205B3F00AD80FB /* Page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page.swift; sourceTree = "<group>"; };
+		35167BD61F206A0200AD80FB /* PageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageController.swift; sourceTree = "<group>"; };
 		35908D601F2015FF00113808 /* InteractiveStory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InteractiveStory.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35908D631F2015FF00113808 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		35908D651F2015FF00113808 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +29,10 @@
 		35908D6A1F2015FF00113808 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		35908D6D1F2015FF00113808 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		35908D6F1F2015FF00113808 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		35AF6A6E1F22A49800F72FAC /* Audio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Audio.swift; sourceTree = "<group>"; };
+		35AF6A701F22ADE300F72FAC /* HappyEnding.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = HappyEnding.wav; sourceTree = "<group>"; };
+		35AF6A711F22ADE300F72FAC /* PageTurn.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = PageTurn.wav; sourceTree = "<group>"; };
+		35AF6A721F22ADE300F72FAC /* Ominous.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Ominous.wav; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +65,61 @@
 		35908D621F2015FF00113808 /* InteractiveStory */ = {
 			isa = PBXGroup;
 			children = (
+				35908D771F20195700113808 /* Controller */,
+				35908D761F20195200113808 /* View */,
+				35908D751F20194C00113808 /* Model */,
+				35908D781F20195E00113808 /* Resources */,
+				35908D791F20196900113808 /* Utils */,
 				35908D631F2015FF00113808 /* AppDelegate.swift */,
-				35908D651F2015FF00113808 /* ViewController.swift */,
 				35908D671F2015FF00113808 /* Main.storyboard */,
 				35908D6A1F2015FF00113808 /* Assets.xcassets */,
 				35908D6C1F2015FF00113808 /* LaunchScreen.storyboard */,
 				35908D6F1F2015FF00113808 /* Info.plist */,
 			);
 			path = InteractiveStory;
+			sourceTree = "<group>";
+		};
+		35908D751F20194C00113808 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				35167BD21F2054A000AD80FB /* Story.swift */,
+				35167BD41F205B3F00AD80FB /* Page.swift */,
+				35AF6A6E1F22A49800F72FAC /* Audio.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		35908D761F20195200113808 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		35908D771F20195700113808 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				35908D651F2015FF00113808 /* ViewController.swift */,
+				35167BD61F206A0200AD80FB /* PageController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		35908D781F20195E00113808 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				35AF6A701F22ADE300F72FAC /* HappyEnding.wav */,
+				35AF6A721F22ADE300F72FAC /* Ominous.wav */,
+				35AF6A711F22ADE300F72FAC /* PageTurn.wav */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		35908D791F20196900113808 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,8 +193,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35AF6A6F1F22A49800F72FAC /* Audio.swift in Sources */,
 				35908D661F2015FF00113808 /* ViewController.swift in Sources */,
 				35908D641F2015FF00113808 /* AppDelegate.swift in Sources */,
+				35167BD51F205B3F00AD80FB /* Page.swift in Sources */,
+				35167BD31F2054A000AD80FB /* Story.swift in Sources */,
+				35167BD71F206A0200AD80FB /* PageController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -316,6 +378,7 @@
 				35908D741F2015FF00113808 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
