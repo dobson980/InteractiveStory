@@ -10,9 +10,8 @@ import Foundation
 import AudioToolbox
 
 extension Story {
-    
     var soundEffectName: String {
-        switch self{
+        switch self {
         case .droid, .home: return "HappyEnding"
         case .monster: return "Ominous"
         default: return "PageTurn"
@@ -20,7 +19,9 @@ extension Story {
     }
     
     var soundEffectURL: URL {
-        let path = Bundle.main.path(forResource: soundEffectName, ofType: "wav")!
+        guard let path = Bundle.main.path(forResource: soundEffectName, ofType: "wav") else  {
+            fatalError("File Not Found")
+        }
         
         return URL(fileURLWithPath: path)
     }
